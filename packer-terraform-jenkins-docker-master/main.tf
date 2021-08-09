@@ -17,7 +17,7 @@ resource "aws_instance" "web-1" {
     availability_zone = "us-east-1a"
     instance_type = "t2.micro"
     key_name = "EBS"
-    subnet_id = "subnet-01f9c2774277f4015"
+    subnet_id = "subnet-00316ba9ce9c861a6"
 	private_ip = "10.1.1.111"
     vpc_security_group_ids = ["sg-09c2fc6ae1a93c80e"]
     associate_public_ip_address = true	
