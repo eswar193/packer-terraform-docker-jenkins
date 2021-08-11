@@ -19,7 +19,7 @@ resource "aws_instance" "web-1" {
     key_name = "EBS"
     subnet_id = "subnet-00316ba9ce9c861a6"
 	private_ip = "10.1.1.111"
-    vpc_security_group_ids = ["sg-09c2fc6ae1a93c80e"]
+    vpc_security_group_ids = ["sg-0a29598817bb8bf06"]
     associate_public_ip_address = true	
     tags = {
         Name = "Server-1"
