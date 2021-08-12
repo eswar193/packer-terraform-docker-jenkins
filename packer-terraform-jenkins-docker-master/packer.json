@@ -69,7 +69,7 @@
       "execute_command": "echo 'packer' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'",
       "inline": [
 	    "ls -al",
-	    "sudo cp /tmp/docker.service /lib/systemd/system/docker.service",
+	    "sudo cat /tmp/docker.service /lib/systemd/system/docker.service",
         "systemctl daemon-reload",
         "service docker restart"
 
