@@ -9,16 +9,7 @@ pipeline {
             }
         }
 
-		    stage('Packer Build AMI') {
-          steps {
-            
-            sh 'pwd'
-            sh 'ls -al'
-            sh 'cd /var/lib/jenkins/workspace/pipeline2/packer-terraform-jenkins-docker-master'
-            sh 'ls -al'
-            sh 'packer build packer.json'
-            }
-        }
+		   
 				
 		    stage('Deploy EC2 Server') {
           steps {
