@@ -35,17 +35,17 @@
     {
       "type": "file",
       "source": "bootstrap_docker_ce.sh",
-      "destination": "/tmp/bootstrap_docker_ce.sh"
+      "destination": "/packer-terraform-jenkins-docker-master/bootstrap_docker_ce.sh"
     },
     {
           "type": "file",
           "source": "cleanup.sh",
-          "destination": "/tmp/cleanup.sh"
+          "destination": "/packer-terraform-jenkins-docker-master/cleanup.sh"
     },
 	{
           "type": "file",
           "source": "docker.service",
-          "destination": "/tmp/docker.service"
+          "destination": "/packer-terraform-jenkins-docker-master/docker.service"
     },
     {
       "type": "shell",
