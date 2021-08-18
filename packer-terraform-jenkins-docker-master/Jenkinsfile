@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repo') {
           steps {
             sh 'rm -rf packer-terraform-docker-jenkins'
-            sh 'git clone https://github.com/eswar193/packer-terraform-docker-jenkins.git'
+            sh 'git clone git@github.com:eswar193/packer-terraform-docker-jenkins.git'
             }
         }
 
@@ -14,7 +14,7 @@ pipeline {
             
             sh 'pwd'
             sh 'ls -al'
-            sh 'cd /var/lib/jenkins/workspace/pipeline2/packer-terraform-jenkins-docker-master'
+            sh 'cp /var/lib/jenkins/workspace/pipeline2/packer-terraform-jenkins-docker/*.* .'
             sh 'ls -al'
             sh 'packer build packer.json'
             }
@@ -30,7 +30,7 @@ pipeline {
         stage('Build Docker Image') {
           steps {
             sh 'cd /var/lib/jenkins/workspace/pipeline2/packer-terraform-jenkins-docker-master'
-            sh 'cd /var/lib/jenkins/workspace/pipeline2/packer-terraform-jenkins-docker-master/* /var/lib/jenkins/workspace/pipeline2'
+            sh 'cp /var/lib/jenkins/workspace/pipeline2/packer-terraform-jenkins-docker-master/* /var/lib/jenkins/workspace/pipeline2'
             sh 'docker build -t sreeharshav/pipelinetestprod:${BUILD_NUMBER} .'
             }
         }
